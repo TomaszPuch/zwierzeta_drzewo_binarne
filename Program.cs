@@ -28,7 +28,35 @@ namespace _17_02_22
             string odpowiedz;
 
             //funkcje
-
+            void DodajZwierze();
+            {
+                string nazwa;
+                do
+                {
+                    Console.WriteLine("");
+                    nazwa = Console.ReadLine().ToLower();
+                } while (nazwa == "");
+                if (nazwa == "stop") ;
+                {
+                    koniec = true;
+                    return;
+                }
+                string roznica;
+                do
+                {
+                    Console.WriteLine("Czym różni się " + nazwa + " od zwierzęcia o nazwie " + aktywnePytanie.tresc);
+                    roznica = Console.ReadLine().ToLower();
+                } while (roznica == "");
+                if (roznica == "stop")
+                {
+                    koniec = true;
+                    return;
+                }
+                aktywnePytanie.tak = new Pytanie(nazwa, false);
+                aktywnePytanie.nie = new Pytanie(aktywnePytanie.tresc, false);
+                aktywnePytanie.tresc = roznica;
+                aktywnePytanie.cecha = true;
+            }
             //program
             poczatek = new Pytanie("kot", false);
             Console.WriteLine("ten program probuje zgadnac o jakim zwierzeciu myslisz.");
@@ -45,7 +73,11 @@ namespace _17_02_22
                 {
                     if (aktywnePytanie.cecha) //pytamy o roznice
                     {
-
+                        do
+                        {
+                            Console.WriteLine("Czy to zwierzę " + aktywnePytanie.tresc + "?");
+                            odpowiedz
+                        }
                     }
                     else
                     {
@@ -57,6 +89,13 @@ namespace _17_02_22
                     else
                     {
                         if (odpowiedz == "tak") //zgadlismy
+                        {
+                            Console.WriteLine("Hurra! Zgadłem!")
+                        }
+                        else
+                        {
+                            Console.WriteLine("")
+                        }
                     }
                 } while (fazaPytan && !koniec);
 
