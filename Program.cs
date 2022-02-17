@@ -43,7 +43,21 @@ namespace _17_02_22
                 Console.WriteLine();
                 do //faza pytan
                 {
+                    if (aktywnePytanie.cecha) //pytamy o roznice
+                    {
 
+                    }
+                    else
+                    {
+                        fazaPytan = false;
+                        Console.WriteLine("Czy zwierzę o którym myślisz to " + aktywnePytanie.tresc + "? (tak/nie)");
+                        odpowiedz = Console.ReadLine().ToLower();
+                    } while (odpowiedz != "tak" && odpowiedz != "nie" && odpowiedz != "stop");
+                    if (odpowiedz == "stop") koniec = true;
+                    else
+                    {
+                        if (odpowiedz == "tak") //zgadlismy
+                    }
                 } while (fazaPytan && !koniec);
 
             } while (!koniec);
