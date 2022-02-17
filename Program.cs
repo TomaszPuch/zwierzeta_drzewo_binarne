@@ -23,8 +23,30 @@ namespace _17_02_22
         static void Main(string[] args)
         {
             //zmienne
+            Pytanie poczatek, aktywnePytanie;
+            bool koniec = false, fazaPytan;
+            string odpowiedz;
 
             //funkcje
+
+            //program
+            poczatek = new Pytanie("kot", false);
+            Console.WriteLine("ten program probuje zgadnac o jakim zwierzeciu myslisz.");
+
+            do //petla glowna
+            {
+                fazaPytan = true;
+                aktywnePytanie = poczatek;
+                Console.WriteLine();
+                Console.WriteLine("Zaczynamy! Pomyśl o jakimś zwierzęciu.");
+                Console.WriteLine("Jeśli chcesz zakończyć działanie aplikacji wpisz \"stop\".");
+                Console.WriteLine();
+                do //faza pytan
+                {
+
+                } while (fazaPytan && !koniec);
+
+            } while (!koniec);
         }
     }
 }
